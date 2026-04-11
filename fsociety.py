@@ -20,7 +20,8 @@ while True:
         print("  infos - show updates  ")
         print("  exit - exit programm  ")
         print("  ddos - ddos attack    ")
-        print("   hack - hack attack   ")
+        print("   hack - payload hack  ")
+        print("   ransom - simulator   ")
         print("------------------------")
 
     elif choice == "fastfetch":
@@ -59,7 +60,7 @@ while True:
         print("\nhttps://github.com/AeroXPtech")
 
     elif choice == "infos":
-        print("changed fastfetch screen to my actual fastfetch screen (yes, i daily drive kali, opsec_lover69hackerman type shi), added DDoS attacks and some little changes")
+        print("added payload hack and ransomware simulator")
 
     elif choice == "exit":
         print("\nGood Bye!")
@@ -130,17 +131,15 @@ while True:
        time.sleep(2)
 
     elif choice == "hack":
-        print("choose Location (ex. usa.gov_server)")
-        site = input()
-        print("What OS you want to Boot (ex. kali_linux)")
-        os = input()
+        print("choose IP (ex. 129.983.38:723 )")
+        ip = input()
         print("Good, what Payload do you want to use")
         print("Luma3DS")
         print("Ja1lh4ck1ng")
         print("dualpayload")
         print("payload.cia")
-        botnet = input()
-        print("Great! wait while " + botnet + " is Ejecting The Hack (Est ca 1 min)")
+        payload = input()
+        print("Great! wait while " + payload + " is Injecting The Hack (Est ca 1 min)")
         time.sleep(5)
         print("Starting Hack")
         time.sleep(2)
@@ -150,15 +149,47 @@ while True:
         time.sleep(5)
         print("patching kernel")
         time.sleep(2)
-        print("Ejecting Payload")
+        print("Injecting Payload")
         time.sleep(5)
         print("rebooting...")
-        time.sleep(7)
-        print("booting in " + os + " ")
         time.sleep(10)
         print("finishing Hack")
         time.sleep(6)
-        print("Successfully Hacked "+ site +" ")
+        print("Successfully Hacked "+ ip +"!")
+        
+    elif choice == "ransom":
+        import tkinter as tk
+
+        class RansomSim:
+            def __init__(self, root):
+                self.root = root
+                self.root.title("SECURITY ALERT")
+                self.root.attributes("-fullscreen", True)  
+                self.root.configure(bg="red")             
+                self.label = tk.Label(root, text="YOUR FILES ARE ENCRYPTED!", 
+                                      fg="white", bg="red", font=("Helvetica", 36, "bold"))
+                self.label.pack(expand=True)
+                self.info = tk.Label(root, text="PAY 0.032 BITCOIN TO THIS ADDRESS TO UNENCRYPT THEM: bc1p6aktp2ruufxuqgv9lfwwgajlckxg2srlle3fe70umrzyu23rhfjsx9jzgx", 
+                                     fg="white", bg="red", font=("Helvetica", 18))
+                self.info.pack(pady=20)
+                self.time_left = 86400  
+                self.timer_label = tk.Label(root, text="", fg="yellow", bg="red", 
+                                            font=("Helvetica", 48, "bold"))
+                self.timer_label.pack(expand=True)
+                self.update_timer()
+
+            def update_timer(self):
+                hours, remainder = divmod(self.time_left, 3600)
+                minutes, seconds = divmod(remainder, 60)
+                time_str = f"{hours:02}:{minutes:02}:{seconds:02}"
+                self.timer_label.config(text=time_str)
+                if self.time_left > 0:
+                    self.time_left -= 1
+                    self.root.after(1000, self.update_timer)
+
+        root = tk.Tk()
+        app = RansomSim(root)
+        root.mainloop()
        
     else:
         print("\nIllegal Command")
