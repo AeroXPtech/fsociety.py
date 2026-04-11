@@ -59,6 +59,7 @@ while True:
                                                      Local IP (wlan0): 192.168.178.35/24
                                                      Battery (5B10W51826): 100% [Discharging]
                                                      Locale: nl_NL.UTF-8
+                                                     0x10 0x20 0x30 0x40 0x50 0x60 0x67
 
                                                                             
                                                                             """)
@@ -215,7 +216,8 @@ while True:
             "charles", "george", "thomas", "william", "alexander", "nicholas", "matthew", "andrew", "daniel", "robert",
             "jennifer", "jessica", "michelle", "amanda", "ashley", "sarah", "stephanie", "heather", "nicole", "elizabeth",
             "princess", "angel", "sweetie", "honey", "cookie", "maggie", "charlie", "bailey", "lucky", "buster",
-            "laptop", "computer", "keyboard", "monitor", "iphone", "android", "windows", "linux", "ubuntu", "kali", "verstappen"
+            "laptop", "computer", "keyboard", "monitor", "iphone", "android", "windows", "linux", "ubuntu", "kali", "elliot",
+            "alderson", "elliotalderson","verstappen"
         ]
 
             print(f"\033[1;33m[!] INITIALIZING BRUTE FORCE ATTACK ON HASH: {target_hash}\033[0m")
