@@ -5,3 +5,5 @@ just have fun or so, make changes to it and so, idk...
 
 imlearingiguess Did i think 98% while Techx32 did i think 2%
                                                             -techx32
+yo youre only copying the stuff we already have.  
+                                                     -imlearningiguess
