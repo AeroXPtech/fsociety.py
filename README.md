@@ -19,7 +19,7 @@ Who did more:
 2. techx32 = 25%
 
 ------------------------------------------------------------------------------
-                                  Updates
+Updates
 ------------------------------------------------------------------------------
 Added C++ Version and Added the Bruteforce Command Which Got Patched on the
 C++ Version that It Randomly Picks Something
