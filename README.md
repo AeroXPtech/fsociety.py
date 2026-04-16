@@ -19,7 +19,6 @@ Who did more:
 2. techx32 = 25%
 
 ------------------------------------------------------------------------------
-Updates
+Infomations
 ------------------------------------------------------------------------------
-Added C++ Version and Added the Bruteforce Command Which Got Patched on the
-C++ Version that It Randomly Picks Something
+Both techx32 and fsociety_linux Made it Just for FUN WE DID NOT MADE IT FOR REAL HACKING WE BOTH KNOW THAT ITS ILLEGAL IN SOME COUNTRYS ITS JUST A FAN PROJECT FOR MR ROBOT AND FSOCIETY
