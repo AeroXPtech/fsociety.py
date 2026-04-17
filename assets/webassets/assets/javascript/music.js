@@ -94,5 +94,62 @@ function playLocalTrack(filename) {
   }
 }
 
+/* JAVASCRIPT - ECHTER AUDIO VISUALIZER */
+const audio = document.getElementById("audio");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioContext.createAnalyser();
+analyser.fftSize = 256;
+
+const source = audioContext.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioContext.destination);
+
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
+
+function drawVisualizer() {
+    requestAnimationFrame(drawVisualizer);
+
+    analyser.getByteFrequencyData(dataArray);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    let barWidth = (canvas.width / bufferLength) * 1.8;
+    let x = 0;
+
+    for (let i = 0; i < bufferLength; i++) {
+        let barHeight = dataArray[i] / 1.6;
+
+        let gradient = ctx.createLinearGradient(0, canvas.height, 0, 0);
+        gradient.addColorStop(0, "rgba(255,255,255,0.3)");
+        gradient.addColorStop(1, "rgba(255,255,255,1)");
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(
+            x,
+            canvas.height - barHeight,
+            barWidth,
+            barHeight
+        );
+
+        x += barWidth + 2;
+    }
+}
+
+/* AudioContext erst nach Klick starten */
+audio.addEventListener("play", async () => {
+    if (audioContext.state === "suspended") {
+        await audioContext.resume();
+    }
+});
+
+drawVisualizer();
+
 // Beim Laden der Seite starten
 window.addEventListener('load', loadMusicLibrary);

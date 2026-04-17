@@ -1,150 +1,217 @@
 :root {
-  --accent: #00ddff;
-  --accent2: #a0f0ff;
-  --glass: rgba(12, 20, 42, 0.96);
-  --text: #ffffff;
-  --text-secondary: #b0d0ff;
+    --accent: #ffffff;
+    --accent2: #adadad;
+    --glass-light: rgba(255, 255, 255, 0.35);
+    --glass-mid: rgba(255, 255, 255, 0.12);
+    --glass-dark: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --text-secondary: #cfcfcf;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background: #0a0f1e;
-  color: var(--text);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.9)),
+        url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
 }
 
+/* MEDIA PLAYER */
 .player {
-  width: 560px;
-  background: var(--glass);
-  border: 1px solid rgba(0, 221, 255, 0.45);
-  border-radius: 24px;
-  padding: 32px 28px;
-  box-shadow: 0 30px 80px rgba(0, 221, 255, 0.25),
-              inset 0 0 60px rgba(255,255,255,0.08);
-  backdrop-filter: blur(26px);
+    width: 560px;
+    padding: 32px 28px;
+    border-radius: 28px;
+
+    background: linear-gradient(
+        160deg,
+        var(--glass-light) 0%,
+        var(--glass-mid) 50%,
+        var(--glass-dark) 100%
+    );
+
+    backdrop-filter: blur(20px) saturate(1.4) brightness(1.05);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4) brightness(1.05);
+
+    border: 1px solid rgba(255,255,255,0.22);
+    border-top: 2px solid rgba(255,255,255,0.65);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
+/* TITEL */
 h1 {
-  text-align: center;
-  font-size: 29px;
-  margin-bottom: 26px;
-  background: linear-gradient(90deg, var(--accent), #ffffff);
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 3px;
+    text-align: center;
+    font-size: 29px;
+    letter-spacing: 3px;
+    margin-bottom: 26px;
+    padding: 12px;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.28),
+        rgba(255,255,255,0.08)
+    );
+
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
 }
 
+/* SUCHE */
 .search-box {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .search-box input {
-  flex: 1;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.09);
-  border: 1px solid rgba(0,221,255,0.5);
-  border-radius: 14px;
-  color: white;
-  font-size: 16px;
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 16px;
+
+    backdrop-filter: blur(8px);
 }
 
 .search-box input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 18px rgba(0,221,255,0.4);
+    outline: none;
+    border-color: rgba(255,255,255,0.55);
+    box-shadow: 0 0 16px rgba(255,255,255,0.08);
 }
 
 .search-box button {
-  padding: 0 28px;
-  background: var(--accent);
-  color: #000;
-  font-weight: 600;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: 0.2s;
+    padding: 0 28px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.9),
+        rgba(220,220,220,0.7)
+    );
+
+    color: black;
+    font-weight: 700;
+    transition: 0.2s;
 }
 
 .search-box button:hover {
-  background: #00eeff;
-  transform: translateY(-1px);
+    transform: translateY(-2px);
+    filter: brightness(1.05);
 }
 
+/* ERGEBNISSE */
 .results {
-  max-height: 260px;
-  overflow-y: auto;
-  margin-bottom: 20px;
-  padding-right: 6px;
+    max-height: 260px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 20px;
 }
 
 .track-result {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 14px 16px;
-  background: rgba(255,255,255,0.07);
-  border-radius: 14px;
-  margin-bottom: 8px;
-  transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.25s ease;
 }
 
 .track-result:hover {
-  background: rgba(0, 221, 255, 0.22);
-  transform: scale(1.02);
+    background: rgba(255,255,255,0.14);
+    transform: scale(1.02);
 }
 
 .title {
-  font-size: 18.5px;
-  font-weight: 600;
-  margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
 }
 
 .artist {
-  font-size: 14px;
-  opacity: 0.8;
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
+/* PROGRESS BAR */
 .progress-container {
-  margin: 22px 0 16px;
+    margin: 22px 0 16px;
 }
 
 .progress {
-  height: 8px;
-  background: rgba(255,255,255,0.18);
-  border-radius: 999px;
-  cursor: pointer;
-  overflow: hidden;
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255,255,255,0.14);
 }
 
 .progress-bar {
-  height: 100%;
-  background: linear-gradient(to right, var(--accent), var(--accent2));
-  width: 0%;
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(
+        to right,
+        var(--accent),
+        var(--accent2)
+    );
 }
 
 .time {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  margin-top: 6px;
-  opacity: 0.85;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 7px;
+    color: rgba(255,255,255,0.82);
 }
 
-#visualizer {
-  width: 100%;
-  height: 100px;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 16px;
-  margin-top: 10px;
+/* SCROLLBAR */
+.results::-webkit-scrollbar {
+    width: 6px;
+}
+
+.results::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+/* CSS */
+.visualizer {
+    width: 100%;
+    height: 130px;
+    margin: 18px 0 24px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.visualizer canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
 }

@@ -26,20 +26,12 @@
 
     <div class="now-playing">
       <div id="title" class="title">Nothing Being Played Right Now</div>
-      <div id="artist" class="artist">—</div>
+      <div id="artist" class="artist">by</div>
     </div>
 
-    <div class="progress-container">
-      <div class="progress" id="progress">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
-      <div class="time">
-        <span id="currentTime">0:00</span>
-        <span id="duration">0:00</span>
-      </div>
+    <div class="visualizer" id="visualizer">
+        <canvas id="canvas"></canvas>
     </div>
-
-    <canvas id="visualizer" width="520" height="100"></canvas>
 
     <audio id="audio" style="display: none;"></audio>
   </div>

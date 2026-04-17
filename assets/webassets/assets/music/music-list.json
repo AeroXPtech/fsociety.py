@@ -3,7 +3,17 @@
     {
       "title": "Fsociety",
       "file": "fsociety.mp3",
-      "artist": "fsociety"
+      "artist": "by fsociety"
+    },
+    {
+        "title": "Trillium",
+        "file": "Trillium.mp3",
+        "artist": "by S3RL"
+    },
+    {
+        "title": "Too Late",
+        "file": "too late.mp3",
+        "artist": "by RemaX"
     }
   ]
 }
