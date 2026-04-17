@@ -30,7 +30,8 @@ async function loadMusicLibrary() {
         Bitte überprüfe:<br>
         • Liegt die Datei wirklich in <strong>assets/music/music-list.json</strong>?<br>
         • Öffnest du musicplayer.html mit Live Server?<br>
-        • Dateiname ist exakt "music-list.json"
+        • Dateiname ist exakt "music-list.json"<br><br>
+        German Error here translate to english: music-list.json is missing
       </p>`;
   }
 }
