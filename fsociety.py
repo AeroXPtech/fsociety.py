@@ -1,4 +1,5 @@
 import time
+import os
 print("""
     .o88o.                               o8o                .
     888 `"                               `"'              .o8
@@ -61,8 +62,8 @@ while True:
                                                      Locale: nl_NL.UTF-8
                                                      0x10 0x20 0x30 0x40 0x50 0x60 0x67
 
-                                                                            
-                                                                            """)
+                                                                              
+                                                                             """)
 
     elif choice == "github":
         print("\nhttps://github.com/AeroXPtech")
@@ -217,7 +218,12 @@ while True:
             "jennifer", "jessica", "michelle", "amanda", "ashley", "sarah", "stephanie", "heather", "nicole", "elizabeth",
             "princess", "angel", "sweetie", "honey", "cookie", "maggie", "charlie", "bailey", "lucky", "buster",
             "laptop", "computer", "keyboard", "monitor", "iphone", "android", "windows", "linux", "ubuntu", "kali", "elliot",
-            "alderson", "elliotalderson","verstappen"
+            "alderson", "elliotalderson", "verstappen", "hamilton", "starwars", "avengers", "pokemon", "superstar", "freedom", "awesome",
+            "keyboard", "asdfghjk", "mnbvcxz", "1q2w3e4r", "password!", "P@ssw0rd1", "user1234", "test1234", "admin123", "manager",
+            "spring2024", "summer24", "winter25", "january", "monday", "coffee", "whiskey", "tequila", "beer123", "smoke",
+            "quantum", "entropy", "algorithm", "localhost", "127.0.0.1", "sysadmin", "database1", "oracle", "cisco123", "security!",
+            "beowulf", "ragnarok", "anubis", "zeus123", "olympus", "viking", "sparta", "gladiator", "phoenix", "valhalla",
+            "carpediem", "mementomori", "cogitoergo", "fortuna", "virtue", "justice", "liberty", "victory", "champion", "winner"
         ]
 
             print(f"\033[1;33m[!] INITIALIZING BRUTE FORCE ATTACK ON HASH: {target_hash}\033[0m")
