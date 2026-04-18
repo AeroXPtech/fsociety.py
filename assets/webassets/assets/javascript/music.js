@@ -18,6 +18,7 @@ async function loadMusicLibrary() {
     const data = await response.json();
     musicLibrary = data.music || [];
     
+    console.log("I See You");
     console.log(`✅ ${musicLibrary.length} Songs erfolgreich geladen!`);
     renderLibrary(musicLibrary);
 

@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fs0c13ty - Media Player</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/sidebar.css">
   <link rel="stylesheet" href="../assets/css/music.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
-    <nav class="navbar-top">
-        <a href="../../../index.html">Home</a>
-        <a href="https://github.com/AeroXPtech/fSocialty.py">Github</a>
-        <a href="aboutus.html">About us</a>
-        <a href="musicplayer.html">Music Player</a>
-    </nav>
+<aside class="sidebar-left">
+  <ul>
+
+    <li><strong>This Website</strong></li>
+    <li><a href="../../../index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="aboutus.html"><i class="fa-solid fa-user"></i> About us</a></li>
+    <li><a href="musicplayer.html"><i class="fa-solid fa-music"></i>Music Player</a></li>
+
+
+  </ul>
+</aside>
 
   <div class="player">
     <h1>Fs0c13ty M3d14 Pl4y3r</h1>
-    <h4>Please mail me if content needs to be Removed aeroxptech@gmail.com</h4><br>
+    <h4>Please mail me if content needs to be Removed/Added aeroxptech@gmail.com</h4><br>
 
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search Your Music..." onkeyup="if(event.key === 'Enter') searchMusic()">
@@ -27,7 +34,7 @@
 
     <div class="now-playing">
       <div id="title" class="title">Nothing Being Played Right Now</div>
-      <div id="artist" class="artist">by</div>
+      <div id="artist" class="artist"></div>
     </div>
 
     <div class="visualizer" id="visualizer">
@@ -40,6 +47,6 @@
 <footer class="footer">
     <p>Made By Techy32 & fsociety_linux | 2026</p>
 </footer>
-  <script src="../assets/javascript/music.js"></script>
+<script src="../assets/javascript/music.js"></script>
 </body>
 </html>
