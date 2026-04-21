@@ -1,1 +1,12 @@
-console.log("Hello World!")
+const sidebar = document.getElementById("sidebar");
+const btn = document.getElementById("menuToggle");
+
+  btn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+  });
+
+document.addEventListener("click", (e) => {
+  if (!sidebar.contains(e.target) && !btn.contains(e.target)) {
+    sidebar.classList.remove("open");
+  }
+});
