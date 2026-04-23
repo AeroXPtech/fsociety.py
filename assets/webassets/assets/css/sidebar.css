@@ -113,7 +113,7 @@
 /* =========================
    MOBILE SIDEBAR BEHAVIOR
 ========================= */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   .sidebar-left {
     top: 0;
