@@ -26,3 +26,5 @@ Both techx32 and fsociety_linux Made it Just for FUN WE DID NOT MADE IT FOR REAL
                                                                                                       
 SON IM CRINE TF YOU TALKING ABOUT NAAHAHAHAHHAAHHAAHAHHAHAHAHAHAHHAHAHAHAHHAHUFDUAGSFBRD
                                                                 -imlearningiguess
+
+uhh btw this will be in an arg
