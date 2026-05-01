@@ -138,8 +138,8 @@ body {
 /* Footer */
 .footer {
   position: fixed;
-  right: 15px;
-  bottom: 15px;
+  right: 25px;
+  bottom: 25px;
   padding: 10px 16px;
   border-radius: var(--radius-small);
   font-size: 0.95rem;
