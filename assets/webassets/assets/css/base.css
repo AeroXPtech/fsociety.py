@@ -228,3 +228,8 @@ body {
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
+
+#goupbutton {
+  text-align: center !important;
+  color: white;
+}
