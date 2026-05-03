@@ -233,3 +233,21 @@ body {
   text-align: center !important;
   color: white;
 }
+
+.memberslistweb {
+    grid-template-columns: 1fr;
+    gap: 22px;
+
+  .memlistweb  {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.memberslistweb background {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;  
+}

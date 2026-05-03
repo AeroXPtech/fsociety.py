@@ -1,5 +1,6 @@
 import time
 import os
+
 print("""
     .o88o.                               o8o                .
     888 `"                               `"'              .o8
@@ -22,14 +23,15 @@ while True:
 
     if choice == "help":
         print("\n------------------------")
-        print("  fastfetch - show specs  ")
-        print("   github - show source   ")
-        print("   infos - show updates   ")
-        print("   exit - exit programm   ")
-        print("   ddos - ddos attack     ")
-        print("   hack - payload hack    ")
-        print("   ransom - simulator     ")
-        print(" bruteforce - brute force ")
+        print("fastfetch - show specs    ")
+        print("github - show source      ")
+        print("infos - show updates      ")
+        print("exit - exit programm      ")
+        print("ddos - ddos attack        ")
+        print("hack - payload hack       ")
+        print("ransom - simulator        ")
+        print("bruteforce - brute force  ")
+        print("firewall - enable or dis..")
         print("--------------------------")
 
     elif choice == "fastfetch":
@@ -74,6 +76,64 @@ while True:
     elif choice == "exit":
         print("\nGood Bye!")
         exit()
+
+    elif choice == "rootkit":
+        import sys
+        import random
+        import hashlib
+
+        def simulate_brute_force(target_hack):
+            common_passwords = [
+            "123456", "password", "123456789", "qwerty", "12345678", "12345", "1234567", "password123", "1234567890", "1234",
+            "admin", "p@ssword", "root", "111111", "monkey", "sunshine", "iloveyou", "letmein", "secret", "football",
+            "dragon", "master", "shadow", "hunter", "superman", "batman", "killer", "matrix", "hacker", "fsociety",
+            "welcome", "login", "guest", "access", "system", "security", "server", "network", "firewall", "database",
+            "000000", "123123", "654321", "987654321", "password1", "pass123", "abc123", "qazwsx", "wsxedc", "edcrfv",
+            "chelsea", "arsenal", "liverpool", "united", "barcelona", "madrid", "soccer", "baseball", "basketball", "hockey",
+            "charles", "george", "thomas", "william", "alexander", "nicholas", "matthew", "andrew", "daniel", "robert",
+            "jennifer", "jessica", "michelle", "amanda", "ashley", "sarah", "stephanie", "heather", "nicole", "elizabeth",
+            "princess", "angel", "sweetie", "honey", "cookie", "maggie", "charlie", "bailey", "lucky", "buster",
+            "laptop", "computer", "keyboard", "monitor", "iphone", "android", "windows", "linux", "ubuntu", "kali", "elliot",
+            "alderson", "elliotalderson", "verstappen", "hamilton", "starwars", "avengers", "pokemon", "superstar", "freedom", "awesome",
+            "keyboard", "asdfghjk", "mnbvcxz", "1q2w3e4r", "password!", "P@ssw0rd1", "user1234", "test1234", "admin123", "manager",
+            "spring2024", "summer24", "winter25", "january", "monday", "coffee", "whiskey", "tequila", "beer123", "smoke",
+            "quantum", "entropy", "algorithm", "localhost", "127.0.0.1", "sysadmin", "database1", "oracle", "cisco123", "security!",
+            "beowulf", "ragnarok", "anubis", "zeus123", "olympus", "viking", "sparta", "gladiator", "phoenix", "valhalla",
+            "carpediem", "mementomori", "cogitoergo", "fortuna", "virtue", "justice", "liberty", "victory", "champion", "winner"
+        ]
+
+        print("Where Do you want to Eject Rootkit?")
+        time.sleep(3)
+        print("root")
+        time.sleep(3)
+        print("home")
+        time.sleep(3)
+        print("everywhere")
+        time.sleep(3)
+        print("own location")
+        time.sleep(4)
+        print("\nKeep it Empty For Root Location")
+        local = input("/")
+        time.sleep(3)
+        print("Great! Wait while The Rootkit is Ejecting in /" + local + " ")
+        time.sleep(2)
+        print("Password Hack Required continue?")
+        option = input()
+        print(""+option+" was Picked")
+        time.sleep(4)
+        print("\n\033[1;31m[/]COULDN'T KILL PROSESS... CONTINUING\033[0m")
+        time.sleep(3)
+        print("May Take A While")
+        time.sleep(45)
+        print("Password Found!")
+        print("Password: KIRBY1213FSBLABLABLA.")
+        print("Attempt 24360 From 2045364362")
+        time.sleep(3)
+        print("Loading Payload via Exploit")
+        time.sleep(5)
+        print("SUCCESSFULLY ROOTED " + local + "")
+        print("Target May Get a Email!!!")
+        time.sleep(4)
 
     elif choice == "ddos":
        print("choose Website (ex. usa.gov)")
@@ -246,6 +306,17 @@ while True:
 
         target = "6f52550186105d6a2f7c006769062947" 
         simulate_brute_force(target)
-        
+
+    elif choice == "firewall":
+        print("""Firewall
+        is Loading""")
+        time.sleep(5)
+        print("Firewall.framework")
+        print("FAILED TO AUTO ENABLE FIREWALL!!! [Current State: Disabled][Error Code: 3435FWEE]")
+        firewall = input("""Enable Or Disable Firewall Manually
+        >>> """)
+        print("""FIREWALL STATUS: 
+        " + firewall + "[Temporary State!!!]""")
+      
     else:
         print("\nIllegal Command")

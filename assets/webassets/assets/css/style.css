@@ -102,3 +102,13 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.htxt {
+  background: linear-gradient(to bottom, 
+    #c8ffc5 0%, 
+    #1fbf24 55%,
+    #009a05 55%, 
+    #457a28 100%
+);
+text-align: center;
+}
