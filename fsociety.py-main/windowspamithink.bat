@@ -1,0 +1,3 @@
+:loop
+cmd
+goto loop
